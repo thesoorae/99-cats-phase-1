@@ -1,0 +1,8 @@
+Rails.application.routes.draw do
+  resources :cats
+  resources :cat_rental_requests
+
+  resources :cat_rental_requests do
+    post 'approve', on: :member
+  end
+end

@@ -1,0 +1,28 @@
+<h1>Request a Cat Rental </h1>
+
+<!-- <%# if cat.persisted? %>
+  <%# action_url = cat_url(cat)%>
+<%# else %>
+  <%# action_url = cats_url %>
+<%# end %> -->
+
+<form action= '<%=cat_rental_requests_url%>' method="post">
+  <!-- <%# if cat.persisted? %>
+  <input type="hidden" name="_method" value="PATCH">
+  <%#end %> -->
+
+  <label for="cat_name">Cat Name</label>
+  <select id="cat_name" name="cat_rental_request[cat_id]">
+    <% @cats.each do |cat| %>
+    <option value="<%=cat.id%>"><%=cat.name%></option>
+  <% end %>
+</select>
+
+<label for="start_date">Start Date</label>
+<input type="date" name="cat_rental_request[start_date]">
+
+<label for="end_date">End Date</label>
+<input type="date" name="cat_rental_request[end_date]" >
+
+<input type="submit" value='Request Rental'>
+</form>

@@ -1,0 +1,22 @@
+<h1>Your Request</h1>
+
+<table>
+  <tr>
+  <th>Cat ID</th>
+  <th>Cat Name</th>
+  <th>Start Date</th>
+  <th>End Date</th>
+  </tr>
+  <tr>
+  <td align='center'><%= @request.cat_id %></td>
+  <td align='center'><%= @request.cat_name %></td>
+  <td><%= @request.start_date %></td>
+  <td><%= @request.end_date %></td>
+  </tr>
+  <tr>
+  <th>Status</th>
+</tr>
+<tr>
+  <td><%= @request.status %></td>
+</tr>
+</table>
